@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bangumi 域名切换 · 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img class="brand-icon" src="icons/icon48.png" width="32" height="32" alt="">
+        <div class="brand-text">
+          <h1>Bangumi 域名切换</h1>
+          <p class="version">v<span id="version">1.0.0</span> · 在 bgm.tv 与 bangumi.tv 之间一键切换</p>
+        </div>
+      </div>
+      <a class="site-link" href="https://bangumi.tv/" target="_blank" rel="noopener noreferrer">打开 Bangumi ↗</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="card">
+      <div class="row">
+        <div class="row-text">
+          <h2>页面左下角域名滑块</h2>
+          <p>在 bgm.tv / bangumi.tv 页面左下角显示「Bangumi / Bgm」滑块，点击即可切换域名。</p>
+        </div>
+        <label class="switch" title="显示或隐藏左下角滑块">
+          <input type="checkbox" id="slider-visible">
+          <span class="switch-track" aria-hidden="true">
+            <span class="switch-thumb"></span>
+          </span>
+          <span class="sr-only">显示左下角域名滑块</span>
+        </label>
+      </div>
+      <p class="hint">滑块上的 × 会隐藏它；隐藏后可以在这里、或右键网页 →「显示/隐藏左下角域名滑块」重新开启。</p>
+    </section>
+
+    <section class="card">
+      <h2>滑块主题</h2>
+      <p>「自动」会检测 Bangumi 页面当前的明暗，自动切换为浅色或深色外观。</p>
+
+      <div class="segmented" role="radiogroup" aria-label="滑块主题">
+        <label>
+          <input type="radio" name="theme" value="auto">
+          <span>自动</span>
+        </label>
+        <label>
+          <input type="radio" name="theme" value="light">
+          <span>浅色</span>
+        </label>
+        <label>
+          <input type="radio" name="theme" value="dark">
+          <span>深色</span>
+        </label>
+      </div>
+
+      <div class="preview-block">
+        <span class="preview-label">外观预览</span>
+        <div class="mini" id="slider-preview" data-theme="light" aria-hidden="true">
+          <div class="mini-track">
+            <span class="mini-thumb"></span>
+            <span class="mini-opt">Bangumi</span>
+            <span class="mini-opt on">Bgm</span>
+          </div>
+          <span class="mini-close">
+            <svg viewBox="0 0 10 10" width="9" height="9"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>使用方法</h2>
+      <ul class="tips">
+        <li><b>点击工具栏图标</b>：立即在当前页面切换 bgm.tv ↔ bangumi.tv，路径、查询参数和锚点都会保留。</li>
+        <li><b>点击左下角滑块</b>：点 <b>Bangumi</b> 前往 bangumi.tv，点 <b>Bgm</b> 前往 bgm.tv。</li>
+        <li><b>右键网页</b>：菜单里有「切换 Bangumi ↔ Bgm 域名」和「显示/隐藏左下角域名滑块」。</li>
+        <li>滑块只在 Bangumi 站点出现，其他网站不受影响。</li>
+      </ul>
+      <div class="buttons">
+        <a class="btn" href="https://bangumi.tv/" target="_blank" rel="noopener noreferrer">打开 bangumi.tv</a>
+        <a class="btn ghost" href="https://bgm.tv/" target="_blank" rel="noopener noreferrer">打开 bgm.tv</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span id="status">设置已自动保存</span>
+    <button type="button" class="link-button" id="reset">恢复默认设置</button>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="lib.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
