@@ -2,8 +2,8 @@
 
 一个 Chrome / Edge 的 Manifest V3 扩展：在 `bgm.tv` 与 `bangumi.tv` 之间一键切换，并在页面左下角注入一个与 Bangumi 原站风格一致的 **Bangumi / Bgm** 滑块。
 
+<img width="1256" height="808" alt="real-site" src="https://github.com/user-attachments/assets/7e0b866c-4073-4925-987d-ce800bf3af48" />
 
-![真实页面中的左下角滑块](docs/screenshots/real-site.png)
 
 ## 功能
 
@@ -19,7 +19,7 @@
 
 | 关闭滑块时的提示 | 设置页 |
 | --- | --- |
-| ![隐藏提示](docs/screenshots/toast.png) | ![设置页](docs/screenshots/options.png) |
+| <img width="1256" height="808" alt="toast" src="https://github.com/user-attachments/assets/0b943919-a762-4c88-889f-a2b7921af123" /> | <img width="1256" height="808" alt="options" src="https://github.com/user-attachments/assets/5ab0bdb5-8b4d-4ea1-8083-515af485581d" /> |
 
 
 ## 安装
